@@ -16,7 +16,7 @@ const steps = [
   },
   {
     number: "03",
-    period: "Mai 2026",
+    period: "À venir...",
     title: "Gala de Prestige",
     description:
       "La grande soir\u00e9e de repr\u00e9sentation. Le laur\u00e9at de chaque cat\u00e9gorie repartira avec un troph\u00e9e.",
