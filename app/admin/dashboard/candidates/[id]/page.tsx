@@ -1,3 +1,4 @@
+import { headers } from "next/headers"
 import { notFound } from "next/navigation"
 import { CandidateProfileDetail } from "@/components/candidate-profile-detail"
 
@@ -8,8 +9,15 @@ type PageProps = {
 export default async function CandidateDetailPage({ params }: PageProps) {
   const { id } = await params
 
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"
-  const res = await fetch(`${baseUrl}/api/candidates/${id}`, {
+  const h = await headers()
+  const host = h.get("x-forwarded-host") || h.get("host")
+  const protocol = h.get("x-forwarded-proto") || "https"
+
+  if (!host) {
+    notFound()
+  }
+
+  const res = await fetch(`${protocol}://${host}/api/candidates/${id}`, {
     cache: "no-store",
   })
 
