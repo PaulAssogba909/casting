@@ -6,7 +6,7 @@ export function PosterSection() {
       <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         <div className="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
           <Image
-            src="/public/images/affiche.jpeg"
+            src="/images/poster.jpg.jpeg"
             alt="Affiche officielle du casting La Magie du Soir 2026"
             fill
             className="object-cover"
