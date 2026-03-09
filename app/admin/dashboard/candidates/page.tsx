@@ -390,6 +390,68 @@ export default function CandidatesPage() {
           </table>
         </div>
 
+        <div className="md:hidden flex flex-col">
+              {filtered.map((c) => {
+                const badge = STATUS_MAP[c.status]
+
+                return (
+                  <div
+                    key={c.id}
+                    className="p-4 border-b border-border/50 last:border-0"
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
+                          <span className="text-primary text-sm font-bold">
+                            {c.initials}
+                          </span>
+                        </div>
+                        <div>
+                          <p className="text-foreground font-medium text-sm">
+                            {c.name}
+                          </p>
+                          <p className="text-muted-foreground text-xs">
+                            {c.email}
+                          </p>
+                        </div>
+                      </div>
+
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => router.push(`/admin/dashboard/candidates/${c.id}`)}
+                        className="text-muted-foreground hover:text-primary h-8 w-8"
+                      >
+                        <Eye className="h-4 w-4" />
+                      </Button>
+                    </div>
+
+                    <div className="flex items-center justify-between text-xs text-muted-foreground mb-3">
+                      <span>{c.category} • {c.city}</span>
+                      <span>{c.date}</span>
+                    </div>
+
+                    <Select
+                      value={c.status}
+                      onValueChange={(value) =>
+                        updateStatus(c.id, value as CandidateStatus)
+                      }
+                    >
+                      <SelectTrigger className={`w-full ${badge.className}`}>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="nouveau">Nouveau</SelectItem>
+                        <SelectItem value="reviewing">En revue</SelectItem>
+                        <SelectItem value="approved">Approuvé</SelectItem>
+                        <SelectItem value="rejected">Rejeté</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                )
+              })}
+           </div>
+
         {!loading && filtered.length === 0 && (
           <div className="p-12 text-center text-muted-foreground">
             Aucun candidat trouvé avec ces critères.
