@@ -14,7 +14,7 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl flex items-center justify-between px-4 py-3 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/images/logo.jpg"
+            src="/images/logo.jpeg"
             alt="La Magie du Soir"
             width={44}
             height={44}
@@ -41,7 +41,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <a href="tel:+22901975096422" className="hidden sm:flex">
+          <a href="tel:+2290197509642" className="hidden sm:flex">
             <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               <Phone className="h-4 w-4 mr-2" />
               Appeler
@@ -84,7 +84,7 @@ export function Navbar() {
           <Link href="/admin" onClick={() => setMobileOpen(false)} className="text-muted-foreground hover:text-primary text-sm">
             Admin
           </Link>
-          <a href="tel:+22901975096422" className="flex items-center gap-2 text-primary text-sm">
+          <a href="tel:+2290197509642" className="flex items-center gap-2 text-primary text-sm">
             <Phone className="h-4 w-4" />
             Appeler pour plus d{"'"}info
           </a>
