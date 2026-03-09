@@ -14,7 +14,7 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl flex items-center justify-between px-4 py-3 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/images/logo.jpeg"
+            src="/images/logo.jpg"
             alt="La Magie du Soir"
             width={44}
             height={44}
