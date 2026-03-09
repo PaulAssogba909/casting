@@ -22,7 +22,7 @@ export function CtaSection() {
                 REJOINDRE LE CASTING
               </Button>
             </Link>
-            <a href="tel:+22901975096422">
+            <a href="tel:+2290197509642">
               <Button
                 variant="outline"
                 size="lg"
