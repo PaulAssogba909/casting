@@ -450,7 +450,7 @@ export default function CastingPage() {
                       {"Motivation"} <span className="text-primary">*</span>
                     </label>
                     <Textarea
-                      placeholder="Pourquoi souhaitez-vous participerà La Magie du Soir ?"
+                      placeholder="Pourquoi souhaitez-vous participer à La Magie du Soir ?"
                       value={formData.motivation}
                       onChange={(e) =>
                         updateField("motivation", e.target.value)
