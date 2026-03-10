@@ -9,6 +9,10 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'La Magie du Soir 2026 - Casting Officiel',
   description: 'Gala des Acteurs Culturels - Rejoignez le casting officiel de La Magie du Soir 2026. Artistes, chanteurs, danseurs, slameurs, stylistes et plasticiens sont recherches.',
+  icons: {
+    icon: '/images/logo.jpg',
+    apple: '/images/logo.jpg',
+  },
 }
 
 export default function RootLayout({
