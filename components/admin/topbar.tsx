@@ -7,6 +7,14 @@ import { useRouter } from "next/navigation"
 import { Search, Bell, Settings, Menu, X, LayoutDashboard, Users, Tag, CalendarDays, FileText, LogOut } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export function AdminTopbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -53,23 +61,73 @@ export function AdminTopbar() {
           </div>
 
           <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-muted-foreground hover:text-foreground relative"
-            >
-              <Bell className="h-5 w-5" />
-              <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary" />
-              <span className="sr-only">Notifications</span>
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              <Settings className="h-5 w-5" />
-              <span className="sr-only">{"Param\u00e8tres"}</span>
-            </Button>
+            {/* Bouton Notifications */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-muted-foreground hover:text-foreground relative"
+                >
+                  <Bell className="h-5 w-5" />
+                  <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary" />
+                  <span className="sr-only">Notifications</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-72">
+                <DropdownMenuLabel>Notifications</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem className="flex flex-col items-start gap-1 py-3">
+                  <span className="text-sm font-medium">Nouvelle candidature</span>
+                  <span className="text-xs text-muted-foreground">Un nouveau candidat vient de soumettre sa candidature.</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="flex flex-col items-start gap-1 py-3">
+                  <span className="text-sm font-medium">Casting confirmé</span>
+                  <span className="text-xs text-muted-foreground">Le casting du 20 Avril 2026 est confirmé.</span>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem className="text-center text-primary text-sm justify-center">
+                  Voir toutes les notifications
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Bouton Paramètres */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <Settings className="h-5 w-5" />
+                  <span className="sr-only">Paramètres</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-52">
+                <DropdownMenuLabel>Paramètres</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={() => router.push("/admin/dashboard")}>
+                  Tableau de bord
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => router.push("/admin/dashboard/candidates")}>
+                  Gérer les candidats
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => router.push("/admin/dashboard/events")}>
+                  Gérer les événements
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem
+                  onClick={handleLogout}
+                  className="text-destructive focus:text-destructive"
+                >
+                  <LogOut className="h-4 w-4 mr-2" />
+                  Déconnexion
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Avatar admin */}
             <div className="w-9 h-9 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center">
               <span className="text-primary text-xs font-bold">AD</span>
             </div>
