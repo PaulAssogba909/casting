@@ -570,7 +570,7 @@ export default function CastingPage() {
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div>
-                      <span className="text-muted-foreground">{"Cat\u00e9gorie : "}</span>
+                      <span className="text-muted-foreground">{"Catégorie : "}</span>
                       <span className="text-primary capitalize">{category}</span>
                     </div>
                     <div>
