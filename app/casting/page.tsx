@@ -437,7 +437,7 @@ export default function CastingPage() {
                       {"Expérience artistique"} <span className="text-primary">*</span>
                     </label>
                     <Textarea
-                      placeholder="D\u00e9crivez votre parcours et vos exp\u00e9riences artistiques..."
+                      placeholder="Décrivez votre parcours et vos expériences artistiques..."
                       value={formData.experience}
                       onChange={(e) =>
                         updateField("experience", e.target.value)
@@ -450,7 +450,7 @@ export default function CastingPage() {
                       {"Motivation"} <span className="text-primary">*</span>
                     </label>
                     <Textarea
-                      placeholder="Pourquoi souhaitez-vous participer \u00e0 La Magie du Soir ?"
+                      placeholder="Pourquoi souhaitez-vous participerà La Magie du Soir ?"
                       value={formData.motivation}
                       onChange={(e) =>
                         updateField("motivation", e.target.value)
@@ -679,10 +679,10 @@ export default function CastingPage() {
         <p className="text-center text-sm text-muted-foreground mt-8">
           {"Besoin d'aide ? Contactez notre équipe de casting "}
           <a
-            href="mailto:casting@lamagiedusoir.com"
+            href="mailto:lamagiedusoir@gmail.com"
             className="text-primary hover:underline"
           >
-            casting@lamagiedusoir.com
+            lamagiedusoir@gmail.com
           </a>
         </p>
       </div>
@@ -690,7 +690,7 @@ export default function CastingPage() {
       {/* Footer */}
       <footer className="border-t border-border py-6 text-center">
         <p className="text-xs text-muted-foreground">
-          {"\u00a9 2026 La Magie du Soir. Tous droits réservs."}
+          {"@ 2026 La Magie du Soir. Tous droits réservs."}
         </p>
       </footer>
     </div>
