@@ -129,7 +129,7 @@ export function AdminTopbar() {
 
             {/* Avatar admin */}
             <div className="w-9 h-9 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center">
-              <span className="text-primary text-xs font-bold">AD</span>
+              <span className="text-primary text-xs font-bold">MS</span>
             </div>
           </div>
         </div>
