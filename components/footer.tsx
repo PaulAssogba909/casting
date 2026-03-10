@@ -37,7 +37,7 @@ export function Footer() {
 
           <div className="flex items-center gap-4">
             <a
-              href="tel:+22901975096422"
+              href="tel:+2290197509642"
               className="flex items-center gap-2 text-primary text-xs hover:text-primary/80 transition-colors"
             >
               <Phone className="h-3.5 w-3.5" />
@@ -45,7 +45,7 @@ export function Footer() {
             </a>
             <span className="text-border">|</span>
             <a
-              href="tel:+22901603099998"
+              href="tel:+2290160309998"
               className="flex items-center gap-2 text-primary text-xs hover:text-primary/80 transition-colors"
             >
               <Phone className="h-3.5 w-3.5" />
