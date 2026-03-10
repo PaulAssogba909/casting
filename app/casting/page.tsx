@@ -145,7 +145,7 @@ export default function CastingPage() {
               {"Vous recevrez un email de confirmation sous 48h. Pour toute question :"}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+22901975096422">
+              <a href="tel:+2290197509642">
                 <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                   <Phone className="h-4 w-4 mr-2" />
                   +229 01 97 50 96 42
