@@ -23,7 +23,7 @@ export default function AdminLoginPage() {
       }
       router.push("/admin/dashboard")
     } else {
-      setError("Code incorrect. Veuillez r\u00e9essayer.")
+      setError("Code incorrect. Veuillez réessayer. Seuls les membres de l’administration de MAGIE DU SOIR peuvent connaître ce code..")
     }
   }
 
@@ -61,7 +61,7 @@ export default function AdminLoginPage() {
           <div className="relative mb-4">
             <Input
               type={showCode ? "text" : "password"}
-              placeholder="Code d'acc\u00e8s"
+              placeholder="Code d'accès"
               value={code}
               onChange={(e) => {
                 setCode(e.target.value)
