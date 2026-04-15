@@ -28,7 +28,7 @@ export function PosterSection() {
               <span className="text-foreground font-semibold">Inscription :</span> 5.000 FCFA
             </p>
             <p>
-              <span className="text-foreground font-semibold">Date :</span> 20 Avril 2026 {"a"} 13H00
+              <span className="text-foreground font-semibold">Date :</span> 20 Mai 2026 {"a"} 13H00
             </p>
             <p className="text-primary italic font-medium mt-2">
               {"NB : Le laur\u00e9at de chaque cat\u00e9gorie repartira avec un troph\u00e9e."}
